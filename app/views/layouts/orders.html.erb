@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daily Report</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class = "p-3">
+    <nav class="navbar navbar-expand bg-light">
+        <div class="container-fluid">
+            <h1>Orders</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <a class="nav-link navbar-brand active" aria-current="page" href="/">Home</a>
+              </ul>
+            </div>
+            <button class="btn btn-outline-success" type="submit"><%= link_to "New Order", new_order_path %><br></button>
+        </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+AllCops:
+  SuggestExtensions: false
+  NewCops: disable
+  Exclude:
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/{rails,rake}'
+    - 'bin/bundle'
+    - !ruby/regexp /old_and_unused\.rb$/

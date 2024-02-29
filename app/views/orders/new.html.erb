@@ -1,0 +1,17 @@
+<form id="order_new",data-remote="true">
+  <ul class="list-group">
+  <% @product.each do |product| %>
+    <li class="list-group-item list-group-item-action">
+			<div class="d-flex justify-content-between">
+				<%= link_to product.name, product %>
+				<div class="form-outline" style="width: 22rem;">
+					<input min="0" max="10" type="number" id=<%= product.id %> class="form-control" />
+					<label class="form-label" for="typeNumber">Quantity</label>
+				</div>
+			</div>
+		</li>
+	<% end %>
+	</ul>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<%= javascript_include_tag "order" %>
